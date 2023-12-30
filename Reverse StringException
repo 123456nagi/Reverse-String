@@ -1,22 +1,19 @@
-package com.anp.exception;
-
 import java.util.Scanner;
 
 public class StringException {
-
 
 
 		public static void main(String[] args) {
 	  Scanner sc = new Scanner(System.in);
 	  try {
 	  System.out.println("Enter any String");
-	  String name=sc.nextLine();
-	 String reversedString="";
-	 if(name=="") {
+	  String n=sc.nextLine();
+	 String reversedString= reversedString(n);
+	 if(n == null) {
 		 throw new NullPointerException();
 	 }
-	  for(int i=name.length()-1;i>=0;i--) {
-		  reversedString+=name.charAt(i);
+	  for(int i=n.length()-1;i>=0;i--) {
+		  reversedString+=n.charAt(i);
 	  }
 	  System.out.println("reversed String:"+reversedString);
 	  }
@@ -29,6 +26,10 @@ public class StringException {
 	  }
 		}
 
-	}
+		private static String reversedString(String n) {
+			// TODO Auto-generated method stub
+			return null;
+		}
 
-		
+	}
+			
